@@ -9,7 +9,6 @@ export default function App() {
  return (
    <NavigationContainer>
      <StatusBar backgroundColor = " #131313 " barStyle = "light-content"/>
-      <Text> Score Detran! </Text>
       <Routes/>
    </NavigationContainer>
   );
