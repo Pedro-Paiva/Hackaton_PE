@@ -23,46 +23,43 @@ export default function SignIn() {
         behavior = { Platform.OS === 'ios' ? 'padding' :'' }
         enabled
       >
-
         <AreaInput>
           <Input 
-            placeholder = "Nome"
+            placeholder = " Nome "
             autoCorrect = {false}
             autoCapitalize = "none"
-            value = {nome}
-            onChanfeText ={ (text) => setNome(text)}
+            Value = {nome}
+            onChangeText ={ (text) => setNome(text)}
           />
         </AreaInput>
 
-        
         <AreaInput>
           <Input 
-            placeholder = "CPF"
+            placeholder = " CPF "
             autoCorrect = {false}
             autoCapitalize = "none"
-            value = {cpf}
-            onChanfeText ={ (text) => setCpf(text)}
+            Value = {cpf}
+            onChangeText ={ (text) => setCpf(text)}
           />
         </AreaInput>
 
-        
         <AreaInput>
           <Input 
-            placeholder = "data Nasc."
+            placeholder = " Data de Nasc "
             autoCorrect = {false}
             autoCapitalize = "none"
-            value = {data}
-            onChanfeText ={ (text) => setData(text)}
+            Value = {data}
+            onChangeText ={ (text) => setData(text)}
           />
         </AreaInput>
-       
+
         <AreaInput>
           <Input 
-            placeholder = "Email"
+            placeholder = " Email "
             autoCorrect = {false}
             autoCapitalize = "none"
-            value = {email}
-            onChanfeText ={ (text) => setEmail(text)}
+            Value = {email}
+            onChangeText ={ (text) => setEmail(text)}
           />
         </AreaInput>
 
@@ -71,8 +68,8 @@ export default function SignIn() {
             placeholder = "Senha"
             autoCorrect = {false}
             autoCapitalize = "none"
-            alue = {password}
-            onChanfeText ={ (text) => setPassword(text)}
+            Value = {password}
+            onChangeText ={ (text) => setPassword(text)}
           />
         </AreaInput>
 
@@ -81,8 +78,8 @@ export default function SignIn() {
             placeholder = "Repetir a Senha"
             autoCorrect = {false}
             autoCapitalize = "none"
-            alue = {rep}
-            onChanfeText ={ (text) => setRep(text)}
+            Value = {rep}
+            onChangeText ={ (text) => setRep(text)}
           />
         </AreaInput>
 

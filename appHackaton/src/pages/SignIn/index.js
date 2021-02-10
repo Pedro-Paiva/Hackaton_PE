@@ -25,23 +25,23 @@ export default function SignIn() {
       >
         <Logo source = {require('../../assets/Logo.png')}/>
 
+       
         <AreaInput>
           <Input 
             placeholder = "Email"
             autoCorrect = {false}
             autoCapitalize = "none"
-            value = {email}
-            onChanfeText ={ (text) => setEmail(text)}
+            Value = {email}
+            onChangeText ={ (text) => setEmail(text)}
           />
         </AreaInput>
-
         <AreaInput>
           <Input 
             placeholder = "Senha"
             autoCorrect = {false}
             autoCapitalize = "none"
-            alue = {password}
-            onChanfeText ={ (text) => setPassword(text)}
+            Value = {password}
+            onChangeText ={ (text) => setPassword(text)}
           />
         </AreaInput>
 
