@@ -1,21 +1,23 @@
-import React,  {useState, createContext}  from "react";
+import React, { useState, createContext } from 'react';
 import firebase from '../services/firebaseConnection';
 
 export const AuthContext = createContext({});
 
-function AuthProvider({ children }) {
+function AuthProvider({ children }){
+    const [ user, setUser ] = useState(null);
 
-    const [ user, setUser ] = useState( null );
-      
     //Cadastrar Usuario
-    async function signUp ( email, nome, password, cpf, data, rep ){
+    async function singUp(  email, nome, password, data, cpf, rep){
         await firebase.auth().createUserWithEmailAndPassword(email, password)
-        .then( async(value)=> {
+        .then(async (value) =>{
             let uid = value.user.uid;
             await firebase.database().ref('users').child(uid).set({
-                nome:  nome
+                nome: nome,
+                data: data,
+                cpf: cpf,
+                rep: rep
             })
-            .then(()=> {
+            .then(()=>{
                 let data = {
                     uid: uid,
                     nome: nome,
@@ -27,10 +29,11 @@ function AuthProvider({ children }) {
     }
 
     return(
-        <AuthContext.Provider value = { { signed: !!user , user, signUp} }>
-            { children }
+        <AuthContext.Provider value= {{ signed: !!user, user, singUp }}>
+            {children}
         </AuthContext.Provider>
     );
+
 }
 
 export default AuthProvider;
