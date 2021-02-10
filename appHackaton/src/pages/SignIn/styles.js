@@ -43,7 +43,7 @@ export const SubmitButton = styled.TouchableOpacity`
 
 export const SubmitText = styled.Text`
     font-size: 20px;
-    color: #000000;
+    color: #FFF;
 `;
 
 export const Link = styled.TouchableOpacity`
@@ -52,6 +52,6 @@ export const Link = styled.TouchableOpacity`
 `;
 
 export const LinkText = styled.Text`
-    color: #fff
+    color: #fff;
 `;
 

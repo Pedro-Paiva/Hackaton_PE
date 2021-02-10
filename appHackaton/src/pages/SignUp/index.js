@@ -11,6 +11,7 @@ export default function SignIn() {
   const [data, setData] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [rep, setRep] = useState('');
 
  return (
    <Background>
@@ -68,6 +69,16 @@ export default function SignIn() {
             autoCapitalize = "none"
             alue = {password}
             onChanfeText ={ (text) => setPassword(text)}
+          />
+        </AreaInput>
+
+        <AreaInput>
+          <Input 
+            placeholder = "Repetir a Senha"
+            autoCorrect = {false}
+            autoCapitalize = "none"
+            alue = {rep}
+            onChanfeText ={ (text) => setRep(text)}
           />
         </AreaInput>
 
